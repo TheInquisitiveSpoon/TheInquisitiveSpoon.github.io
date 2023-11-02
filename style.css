@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Purple theme styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6237A0; /* Purple background color */
+  padding: 10px;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #28104E; /* Background color */
+  z-index: 1; /* Place it behind the SVG */
+}
+
+.text-container {
+  position: relative;
+  top: 40%;
+  left: 5%;
+}
+
+.svg-container {
+  background: url('pattern.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Place it on top of the background color */
+}
+
+.typewriter-text {
+  position: absolute;
+  font-size: 4vw;
+  color: white;
+  font-weight: normal;
+  padding-left: 5%;
+  white-space: nowrap;
+  width: 100%; /* Set a percentage-based width to allow container expansion */
+  z-index: 3;
+}
+
+.logo-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: 2px solid #28104E; /* Orange border color */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.topnav {
+  background-color: #6237A0; /* Purple background color */
+}
+
+.topnav a {
+  float: left;
+  display: flex;
+  align-items: center;
+  color: #ecf0f1; /* Light gray text color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a i {
+  margin-right: 8px;
+  color: #ecf0f1; /* Light gray icon color */
+}
+
+.topnav a:hover {
+  background-color: #9754CB; /* Slightly different shade of purple */
+  color: white;
+}
+
+.learn-more-button {
+  position: absolute;
+  left: 7%;
+  transform: translate(0, 500%) scale(1.2); /* Adjust the scale factor as needed */
+  z-index: 3;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  width: 15vw; /* Adjust the width as needed */
+  height: auto;
+  font-size: 2vw; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+.divider {
+border-style: solid;
+border-width: 90px 100vw 0;
+border-color: #28104E #6237A0;
+}
+
+.about-me-section {
+  background-color: #6237A0; /* Purple background color */
+  padding: 20px;
+  height: 75vh;
+}
+
+.about-me-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.selfie {
+  flex: 1;
+  text-align: center;
+  display: flex; /* Add display flex */
+  left: 5%;
+  align-items: center; /* Center vertically */
+}
+
+.about-me-header {
+  margin: 0;
+  background-color: #6237A0;
+  color: white;
+  position: relative;
+  font-size: 4vw;
+  top: 5%;
+  left: 3%;
+}
+
+.about-me-text {
+  flex: 1; /* Text takes 50% of the width */
+  text-align: left;
+  padding: 20px; /* Add spacing around the text */
+  color: white;
+}
+
+.skills-heading {
+  color: white;
+  padding-top: 50px;
+}
+
+.horizontal-list {
+  color: white;
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding from the list */
+  margin: 0; /* Remove margin from the list */
+}
+
+.custom-item {
+  display: inline-block; /* Display list items horizontally */
+  margin-right: 10px; /* Add spacing between list items (adjust as needed) */
+  /* Add a border and padding to create a box around each list item */
+  border: 1px solid #28104E;
+  background-color: #9754CB;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-width: 3xp;
+  border-radius: 4%;
+  /* Add any common styles you want for all list items here */
+  color: white; /* Example text color */
+  font-weight: normal; /* Example font weight */
+  text-decoration: none; /* Example text decoration */
+}
+
+/* .new-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  background-color: #6237A0;
+}
+
+.about-me-heading {
+  margin: 0;
+  background-color: #6237A0;
+  color: white;
+  position: relative;
+  font-size: 4vw;
+  top: 5%;
+  left: 5%;
+}
+
+.selfie-column {
+  float: left;
+  top: 10%;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.selfie {
+  position: relative;
+  left: 5%;
+  border: #28104E;
+  border-width: 5px;
+  top: 50%;
+} */
