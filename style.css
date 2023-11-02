@@ -3,6 +3,16 @@ body {
   padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Purple theme styles */
 .header {
   display: flex;
@@ -117,6 +127,7 @@ body {
 border-style: solid;
 border-width: 90px 100vw 0;
 border-color: #28104E #6237A0;
+width: 100%;
 }
 
 .about-me-section {
@@ -160,7 +171,7 @@ border-color: #28104E #6237A0;
 
 .skills-heading {
   color: white;
-  padding-top: 50px;
+  padding-top: 5%;
 }
 
 .horizontal-list {
@@ -180,6 +191,8 @@ border-color: #28104E #6237A0;
   margin-bottom: 5px;
   border-width: 3xp;
   border-radius: 4%;
+  width: 90px;
+  text-align: center;
   /* Add any common styles you want for all list items here */
   color: white; /* Example text color */
   font-weight: normal; /* Example font weight */
