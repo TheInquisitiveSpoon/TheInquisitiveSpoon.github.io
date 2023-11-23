@@ -72,6 +72,19 @@ HEADER:
   color: white;
 }
 
+.topnav .menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a {display: none;}
+  .topnav a i {margin-right: 0;}
+  .topnav a.menu {
+    float: right;
+    display: block;
+  }
+}
+
 /*************************************************************************************************
 HERO:
 *************************************************************************************************/
@@ -115,6 +128,15 @@ HERO:
   width: 150px;
   height: 50px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text {font-size: 1rem;}
+  .learn-more-button {
+    top: 50%;
+    width: 100px;
+    height: 40px;
+  }
 }
 
 .divider {
