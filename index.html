@@ -14,7 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-  <div class="header">
+  <script src="script.js"></script>
+  <div class="header" id="header">
     <div class="logo">
       <div class="logo-container">
         <img src="me.jpg" alt="Logo">
@@ -22,12 +23,22 @@
       <span>Niall Starkey</span>
     </div>
 
-    <div class="topnav">
-      <a href="#home"><i class="fa fa-home"></i> Home</a>
-      <a href="#about"><i class="fa fa-info"></i> About</a>
-      <a href="#projects"><i class="fa fa-folder"></i> Projects</a>
-      <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
-      <a href="#menu" class="menu"> <i class="fa fa-bars"></i></a>
+    <div class="topnav" id="topnav">
+      <a href="#home"><i class="fa fa-home"></i>Home</a>
+      <a href="#about"><i class="fa fa-info"></i>About</a>
+      <a href="#projects"><i class="fa fa-folder"></i>Projects</a>
+      <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+
+      <div class="menu">
+        <button class="drpbtn" id="drpbtn" onclick="myFunction()"><i class="fa fa-bars"></i>Menu</button>
+        <div class="dropdown-content" id="drp-content">
+          <a href="#home"><i class="fa fa-home"></i>Home</a>
+          <a href="#about"><i class="fa fa-info"></i>About</a>
+          <a href="#projects"><i class="fa fa-folder"></i>Projects</a>
+          <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -36,7 +47,7 @@
     <div class="hero-content">
       <h1 class="hero-text">
         Hi, my name is<span style="color:#9754CB;"> Niall</span>,<br>
-        I'm an aspiring game developer.
+        I'm a video game developer.
       </h1>
       <button class="learn-more-button">Learn more</button>
     </div>
@@ -76,7 +87,7 @@
       </div>
     </div> -->
 
-  <script src="script.js"></script>
+
 </body>
 
 </html>
