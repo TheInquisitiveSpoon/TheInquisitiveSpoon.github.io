@@ -1,5 +1,6 @@
 function myFunction() {
     document.getElementById("drp-content").classList.toggle("show");
+    console.log("show added")
 }
 
 window.onclick = function (event) {
@@ -7,10 +8,12 @@ window.onclick = function (event) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
 
+      console.log(dropdowns.length)
       for (i = 0; i < dropdowns.length; i++) {
           var openDropdown = dropdowns[i];
           if (openDropdown.classList.contains('show')) {
               openDropdown.classList.remove('show');
+              console.log("show removed");
           }
       }
   }
