@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Niall Starkey | Portfolio</title>
 
   <!--COLOURS-->
   <!--Dark    #28104E -->
@@ -15,6 +15,9 @@
 
 <body>
   <script src="script.js"></script>
+<!---------------------------------------------------------------------------------------------------
+HERO:
+----------------------------------------------------------------------------------------------------->
   <div class="header" id="header">
     <div class="logo">
       <div class="logo-container">
@@ -54,28 +57,102 @@
   </div>
 
   <div class="divider"></div>
-
-  <section class="about-me-section">
-    <h1 class="about-me-header">About me</h1>
+  
+<!---------------------------------------------------------------------------------------------------
+ABOUT ME:
+----------------------------------------------------------------------------------------------------->
+  <div id="about-me-container">
     <div class="about-me-content">
-      <div class="selfie">
-        <img src="me.jpg" alt="Selfie" class="centered-image">
+      <h1 class="stats-header">Stats:</h1>
+      <div class="stats-wrapper">
+        <div class="left-section">
+          <img id="profile-img" src="me.jpg" alt="Profile Image">
+          <div class="stat-divider"></div>
+        </div>
+        <div class="right-section">
+          <h3 class="name">Niall Starkey</h3>
+          <h5 class="title">Video game developer</h5>
+          <div class="lv-bar">
+            <div class="level-progress-bar">
+              <div class="level-progress" style="width: 24%;"></div>
+              <div class="level-progress-label">89/365</div>
+            </div>
+            <div class="level-label">Lv.25</div>
+          </div>
+        </div>
       </div>
-      <div class="about-me-text">
-        Placeholder text goes here. 
+      <div class="stats">
+        <div class="tab">
+          <button class="tablinks active" id="programming" onclick="openCity(event, 'London')">
+            <div class="skill-bar">
+              <div class="skill-name">Programming</div>
+              <div class="skill-progress-bar">
+                <div class="level-progress" style="width: 95%;"></div>
+                <div class="level-progress-label">95/100</div>
+              </div>
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            <div class="skill-bar">
+              <div class="skill-name">Problem Solving</div>
+              <div class="skill-progress-bar">
+                <div class="level-progress" style="width: 75%;"></div>
+                <div class="level-progress-label">75/100</div>
+              </div>
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            <div class="skill-bar">
+              <div class="skill-name">Adaptability</div>
+              <div class="skill-progress-bar">
+                <div class="level-progress" style="width: 65%;"></div>
+                <div class="level-progress-label">65/100</div>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div id="London" class="tabcontent">
+          <h3>Programming</h3>
+          <p>Keen knowledge in many languages.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h3>Problem solving</h3>
+          <p>Ability to break down and solve problems piece by piece.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Adaptability</h3>
+          <p>Can think on the fly and work well in any environment.</p>
+        </div>
       </div>
     </div>
-    <h1 class="skills-heading">Skills:</h1>
-    <ul class="horizontal-list">
-      <li class="custom-item">C++</li>
-      <li class="custom-item">C#</li>
-      <li class="custom-item">Unreal</li>
-      <li class="custom-item">AI</li>
-      <li class="custom-item">Proc gen</li>
-      <li class="custom-item">Unity</li>
-      <li class="custom-item">Visual studio</li>
-    </ul>
-  </section>
+  </div>
+
+
+
+<!--  <section class="about-me-section">-->
+<!--    <h1 class="about-me-header">About me</h1>-->
+<!--    <div class="about-me-content">-->
+<!--      <div class="selfie">-->
+<!--        <img src="me.jpg" alt="Selfie" class="centered-image">-->
+<!--      </div>-->
+<!--      <div class="about-me-text">-->
+<!--        Placeholder text goes here. -->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <h1 class="skills-heading">Skills:</h1>-->
+<!--    <ul class="horizontal-list">-->
+<!--      <li class="custom-item">C++</li>-->
+<!--      <li class="custom-item">C#</li>-->
+<!--      <li class="custom-item">Unreal</li>-->
+<!--      <li class="custom-item">AI</li>-->
+<!--      <li class="custom-item">Proc gen</li>-->
+<!--      <li class="custom-item">Unity</li>-->
+<!--      <li class="custom-item">Visual studio</li>-->
+<!--    </ul>-->
+<!--  </section>-->
   <!-- <div class="new-section">
     <h1 class="about-me-heading">About me:</h1>
     <div class="about-me-row">
