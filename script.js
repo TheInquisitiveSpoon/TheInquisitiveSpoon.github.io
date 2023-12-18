@@ -57,3 +57,24 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
     console.log("shown active")
 }
+
+///////////////////////////////////////////////////
+function moveElementOnResize() {
+    let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    let threshold = 768;
+    
+    let elementToMove = document.getElementById("lv-bar");
+    let targetLocation = document.getElementById("stats");
+    
+    if (viewportWidth <= threshold) {
+        targetLocation.insertBefore(elementToMove, targetLocation.children[2]);
+    } else {
+        document.getElementById("stats-right").appendChild(elementToMove);
+    }
+}
+
+// Call the function on page load
+moveElementOnResize();
+
+// Call the function on window resize
+window.addEventListener('resize', moveElementOnResize);

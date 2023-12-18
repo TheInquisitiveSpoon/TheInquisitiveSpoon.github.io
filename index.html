@@ -2,19 +2,25 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Niall Starkey | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!--COLOURS-->
-  <!--Dark    #28104E -->
-  <!--Purple  #6237A0 -->
+  <!--Dark    #10002B -->
+  <!--Dull    #28104E -->
+  <!--Purple  #542E8C -->
+  <!--Topnav  #6237A0 -->
+  <!--Light   #7D46B6 -->
   <!--Pink    #9754CB -->
+  
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-  <script src="script.js"></script>
 <!---------------------------------------------------------------------------------------------------
 HERO:
 ----------------------------------------------------------------------------------------------------->
@@ -27,18 +33,18 @@ HERO:
     </div>
 
     <div class="topnav" id="topnav">
-      <a href="#home"><i class="fa fa-home"></i>Home</a>
-      <a href="#about"><i class="fa fa-info-circle"></i>About</a>
-      <a href="#projects"><i class="fa fa-folder"></i>Projects</a>
-      <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+      <a href="#home"><i class="material-icons">home</i>Home</a>
+      <a href="#about"><i class="material-icons">person</i>About</a>
+      <a href="#projects"><i class="material-icons">terminal</i>Projects</a>
+      <a href="#contact"><i class="material-icons">mail</i>Contact</a>
 
       <div class="menu">
-        <button class="drpbtn" id="drpbtn" onclick="myFunction()"><i class="fa fa-bars"></i></button>
+        <button class="drpbtn" id="drpbtn" onclick="myFunction()"><i class="material-icons">menu</i></button>
         <div class="dropdown-content" id="drp-content">
-          <a href="#home"><i class="fa fa-home"></i>Home</a>
-          <a href="#about"><i class="fa fa-info"></i>About</a>
-          <a href="#projects"><i class="fa fa-folder"></i>Projects</a>
-          <a href="#contact"><i class="fa fa-envelope"></i>Contact</a>
+          <a href="#home"><i class="material-icons">home</i>Home</a>
+          <a href="#about"><i class="material-icons">info</i>About</a>
+          <a href="#projects"><i class="material-icons">terminal</i>Projects</a>
+          <a href="#contact"><i class="material-icons">mail</i>Contact</a>
         </div>
       </div>
 
@@ -62,53 +68,57 @@ HERO:
 ABOUT ME:
 ----------------------------------------------------------------------------------------------------->
   <div id="about-me-container">
-    <div class="about-me-content">
-      <h1 class="stats-header">Stats:</h1>
-      <div class="stats-wrapper">
+    <h1 class="stats-header">Stats</h1>
+    <div class="about-me-content" id="abt-me-cont">
+      <div class="stats-wrapper" id="stats">
         <div class="left-section">
           <img id="profile-img" src="me.jpg" alt="Profile Image">
           <div class="stat-divider"></div>
         </div>
-        <div class="right-section">
-          <h3 class="name">Niall Starkey</h3>
-          <h5 class="title">Video game developer</h5>
-          <div class="lv-bar">
+        <div class="right-section" id="stats-right">
+          <h2 class="name">Niall Starkey</h2>
+          <p class="title">Video game developer</p>
+          <div class="lv-bar" id="lv-bar">
             <div class="level-progress-bar">
               <div class="level-progress" style="width: 24%;"></div>
-              <div class="level-progress-label">89/365</div>
+              <p class="level-progress-label">89/365</p>
             </div>
-            <div class="level-label">Lv.25</div>
+            <h4 class="level-label">Lv.25</h4>
           </div>
         </div>
+        <p>Some stuff about me, idk but it's really amazing so you should be
+          impressed if i'm honest. Don't even need to convince you, cause you
+          should just know already that i'm sick lad.
+        </p>
       </div>
       <div class="stats">
         <div class="tab">
           <button class="tablinks active" id="programming" onclick="openCity(event, 'London')">
-            <div class="skill-bar">
-              <div class="skill-name">Programming</div>
+            <a class="skill-bar">
+              <h2 class="skill-name">Programming</h2>
               <div class="skill-progress-bar">
                 <div class="level-progress" style="width: 95%;"></div>
-                <div class="level-progress-label">95/100</div>
+                <p class="level-progress-label">95/100</p>
               </div>
-            </div>
+            </a>
           </button>
           <button class="tablinks" onclick="openCity(event, 'Paris')">
-            <div class="skill-bar">
-              <div class="skill-name">Problem Solving</div>
+            <a class="skill-bar">
+              <h2 class="skill-name">Problem Solving</h2>
               <div class="skill-progress-bar">
                 <div class="level-progress" style="width: 75%;"></div>
-                <div class="level-progress-label">75/100</div>
+                <p class="level-progress-label">75/100</p>
               </div>
-            </div>
+            </a>
           </button>
           <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-            <div class="skill-bar">
-              <div class="skill-name">Adaptability</div>
+            <a class="skill-bar">
+              <h2 class="skill-name">Adaptability</h2>
               <div class="skill-progress-bar">
                 <div class="level-progress" style="width: 65%;"></div>
-                <div class="level-progress-label">65/100</div>
+                <p class="level-progress-label">65/100</p>
               </div>
-            </div>
+            </a>
           </button>
         </div>
 
@@ -166,5 +176,5 @@ ABOUT ME:
 
 
 </body>
-
+<script src="script.js"></script>
 </html>
