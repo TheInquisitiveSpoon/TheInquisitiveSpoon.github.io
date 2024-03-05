@@ -1,27 +1,17 @@
 /*************************************************************************************************
 BODY:
 *************************************************************************************************/
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth
-}
-
-button {
-  font-family: "Ubuntu mono", sans-serif;
-  /*font-family: 'Audiowide', sans-serif;*/
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Ubuntu mono', sans-serif;
-  /*font-family: 'Audiowide', sans-serif;*/
-}
-
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Ubuntu mono', sans-serif;
+  color: white;
+}
+
+html, body {
+  max-width: 100%;
+  /*overflow-x: hidden;*/
+  scroll-behavior: smooth;
 }
 
 /*************************************************************************************************
@@ -182,36 +172,33 @@ HERO:
   color: white;
   width: 150px;
   height: 50px;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
-.divider {
+.hero-divider {
   border-style: solid;
-  border-width: 90px 100vw 0;
+  border-width: 120px 100vw 0;
   border-color: #10002B #542E8C;
-  width: 100%;
 }
 
 /*************************************************************************************************
 ABOUT ME:
 *************************************************************************************************/
-#about-me-container {
+.about-me-container {
   background-color: #542E8C;
   color: white;
-  width: 100%;
-  height: 1080px;
-  padding-top: 20px;
+  height: 900px;
 }
 
 .about-me-content {
   margin: auto;
   border: 1px solid #28104E;
   width: 80%;
-  max-width: 1000px;
-  margin-top: 50px;
+  align-items: center;
 }
 
 .stats-header {
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -223,7 +210,7 @@ ABOUT ME:
   padding: 10px;
 }
 
-.stats-wrapper p {
+.stats-info {
   margin: 10px;
   text-align: center;
 }
@@ -317,15 +304,15 @@ ABOUT ME:
 }
 
 /* Style the tab */
-.tab {
+.skills-tab {
   float: left;
   width: 50%;
   height: 400px;
-  /*border-top: 1px solid #10002B;*/
+  border-top: 1px solid #10002B;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.skills-tab button {
   padding: 22px 16px;
   color: white;
   width: 100%;
@@ -336,25 +323,27 @@ ABOUT ME:
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.skills-tab button:hover {
   background-color: #7D46B6;
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+.skills-tab button.active {
   background-color: #10002B;
 }
 
 /* Style the tab content */
-.tabcontent {
+.skill-content {
   float: left;
   display: none;
+  padding-top: 10px;
+  padding-left: 10px;
   /*padding: 10px 12px;*/
   background-color: #10002B;
   width: 50%;
 }
 
-.tabcontent:first-child {
+.skill-content:first-child {
   display: block;
 }
 
@@ -381,6 +370,182 @@ ABOUT ME:
   margin-left: 5px;
 }
 
+.skill-tag {
+  display: inline-block;
+  align-items: center;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 25px;
+  background-color: #10002B;
+  margin-top: 10px;
+}
+
+.ribbon {
+  width: 35px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  transform: rotate(20deg);
+  background-color: #ff9800;
+}
+
+.about-me-divider {
+  border-style: solid;
+  border-width: 90px 100vw 0;
+  border-color: #542E8C #10002B;
+  width: 100%;
+}
+
+/*************************************************************************************************
+PROJECTS:
+*************************************************************************************************/
+.projects-container {
+  background-color: #10002B;
+  width: 100%;
+  height: 1080px;
+  padding-top: 20px;
+}
+
+.projects-header {
+  padding-left: 20px;
+  text-align: center;
+}
+
+.projects-content {
+  width: 100%;
+  height: 900px;
+  margin-top: 50px;
+}
+
+/* Style the tab */
+.projects-tab {
+  display: flex;
+  height: 60px;
+  width: 80%;
+  background-color: #542E8C;
+}
+
+/* Style the buttons inside the tab */
+.projects-tab button {
+  padding: 22px 16px;
+  color: white;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #542E8C;
+}
+
+/* Change background color of buttons on hover */
+.projects-tab button:hover {
+  background-color: #7D46B6;
+}
+
+/* Create an active/current "tab button" class */
+.projects-tab button.active {
+  background-color: #28104E;
+}
+
+/* Style the tab content */
+.tabcontent {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #28104E;
+}
+
+.gallery-slide {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(125, 70, 182, 0.5);
+}
+
+/* Caption text */
+.gallery-text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 50%;
+  left: 25%;
+  background-color: rgba(16, 0, 43, 0.6);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 20px 2px 20px;
+  background-color: #10002B;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #7D46B6;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*.responsive-iframe {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  right: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*}*/
+
 @media screen and (max-width: 768px) {
   .logo {font-size: clamp(0.75rem, 5vw - 0.25rem, 1rem);}
   .topnav>a {display: none;}
@@ -399,7 +564,7 @@ ABOUT ME:
   .stats-wrapper{padding: 10px 0}
   .left-section {width: clamp(40%, 20% + 1vw, 50%);}
   .right-section{width: 50%}
-  .name{font-size: clamp(1rem, 3vw + 0.25rem, 1.875rem);}
+  .name{font-size: clamp(1rem, 3vw + 0.25rem, 1.5rem); margin-bottom: 5px}
   .title{font-size: clamp(0.75rem, 5vw - 0.25rem, 1rem);}
   .lv-bar {
     margin-top: 10px;
@@ -407,26 +572,5 @@ ABOUT ME:
     width: 100%;
     justify-content: center;
   }
+  .skill-name{font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);}
 }
-/*.horizontal-list {*/
-/*  color: white;*/
-/*  list-style: none; !* Remove default list styles *!*/
-/*  padding: 0; !* Remove padding from the list *!*/
-/*  margin: 0; !* Remove margin from the list *!*/
-/*}*/
-
-/*.custom-item {*/
-/*  display: inline-block; !* Display list items horizontally *!*/
-/*  margin-right: 10px; !* Add spacing between list items*!*/
-/*  border: 1px solid #10002B;*/
-/*  background-color: #9754CB;*/
-/*  padding: 5px;*/
-/*  margin-bottom: 5px;*/
-/*  border-width: 3xp;*/
-/*  border-radius: 4%;*/
-/*  width: 90px;*/
-/*  text-align: center;*/
-/*  color: white;*/
-/*  font-weight: normal;*/
-/*  text-decoration: none;*/
-/*}*/

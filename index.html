@@ -9,13 +9,20 @@
   <title>Niall Starkey | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!--COLOURS-->
-  <!--Dark    #10002B -->
-  <!--Dull    #28104E -->
-  <!--Purple  #542E8C -->
-  <!--Topnav  #6237A0 -->
-  <!--Light   #7D46B6 -->
-  <!--Pink    #9754CB -->
+  <!--COLOURS
+  Dark    #10002B
+  Dull    #28104E
+  Purple  #542E8C
+  Topnav  #6237A0
+  Light   #7D46B6
+  Pink    #9754CB
+  
+  VW 1980px-428px
+  
+  TO DO:
+  
+  
+  -->
   
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +33,6 @@ HERO:
 ----------------------------------------------------------------------------------------------------->
   <div class="header" id="header">
     <div class="logo">
-      <div class="logo-container">
-        <img src="me.jpg" alt="Logo">
-      </div>
       <span>Niall Starkey</span>
     </div>
 
@@ -47,11 +51,10 @@ HERO:
           <a href="#contact"><i class="material-icons">mail</i>Contact</a>
         </div>
       </div>
-
     </div>
   </div>
 
-  <div class="hero-container">
+  <div class="hero-container" id="home">
     <div class="hero-svg"></div>
     <div class="hero-content">
       <h1 class="hero-text">
@@ -62,12 +65,12 @@ HERO:
     </div>
   </div>
 
-  <div class="divider"></div>
+  <div class="hero-divider"></div>
   
 <!---------------------------------------------------------------------------------------------------
 ABOUT ME:
------------------------------------------------------------------------------------------------------>
-  <div id="about-me-container">
+ ----------------------------------------------------------------------------------------------------->
+  <div class="about-me-container" id="about">
     <h1 class="stats-header">Stats</h1>
     <div class="about-me-content" id="abt-me-cont">
       <div class="stats-wrapper" id="stats">
@@ -86,14 +89,14 @@ ABOUT ME:
             <h4 class="level-label">Lv.25</h4>
           </div>
         </div>
-        <p>Some stuff about me, idk but it's really amazing so you should be
+        <p class="stats-info">Some stuff about me, idk but it's really amazing so you should be
           impressed if i'm honest. Don't even need to convince you, cause you
           should just know already that i'm sick lad.
         </p>
       </div>
       <div class="stats">
-        <div class="tab">
-          <button class="tablinks active" id="programming" onclick="openCity(event, 'London')">
+        <div class="skills-tab">
+          <button class="skills-tablink" id="programming-tab" onclick="openSkill(event, 'Programming')">
             <a class="skill-bar">
               <h2 class="skill-name">Programming</h2>
               <div class="skill-progress-bar">
@@ -102,7 +105,7 @@ ABOUT ME:
               </div>
             </a>
           </button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">
+          <button class="skills-tablink" onclick="openSkill(event, 'Problem-solving')">
             <a class="skill-bar">
               <h2 class="skill-name">Problem Solving</h2>
               <div class="skill-progress-bar">
@@ -111,7 +114,7 @@ ABOUT ME:
               </div>
             </a>
           </button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+          <button class="skills-tablink" onclick="openSkill(event, 'Adaptability')">
             <a class="skill-bar">
               <h2 class="skill-name">Adaptability</h2>
               <div class="skill-progress-bar">
@@ -122,59 +125,95 @@ ABOUT ME:
           </button>
         </div>
 
-        <div id="London" class="tabcontent">
+        <div id="Programming" class="skill-content">
           <h3>Programming</h3>
           <p>Keen knowledge in many languages.</p>
         </div>
 
-        <div id="Paris" class="tabcontent">
+        <div id="Problem-solving" class="skill-content">
           <h3>Problem solving</h3>
           <p>Ability to break down and solve problems piece by piece.</p>
         </div>
 
-        <div id="Tokyo" class="tabcontent">
+        <div id="Adaptability" class="skill-content">
           <h3>Adaptability</h3>
           <p>Can think on the fly and work well in any environment.</p>
         </div>
       </div>
     </div>
+<!--    <span class="skill-tag">C++<span class="ribbon">8+yrs</span></span>-->
+<!--    <span class="skill-tag">C#</span>-->
+<!--    <span class="skill-tag">XAML</span>-->
+<!--    <span class="skill-tag">Unreal</span>-->
+<!--    <span class="skill-tag">Unity</span>-->
+<!--    <span class="skill-tag">Visual Studio</span>-->
+<!--    <span class="skill-tag">Rider</span>-->
+<!--    <span class="skill-tag">Python</span>-->
+<!--    <span class="skill-tag">Javascript</span>-->
+<!--    <span class="skill-tag">HTML</span>-->
+<!--    <span class="skill-tag">CSS</span>-->
   </div>
 
+  <div class="about-me-divider"></div>
 
-
-<!--  <section class="about-me-section">-->
-<!--    <h1 class="about-me-header">About me</h1>-->
-<!--    <div class="about-me-content">-->
-<!--      <div class="selfie">-->
-<!--        <img src="me.jpg" alt="Selfie" class="centered-image">-->
-<!--      </div>-->
-<!--      <div class="about-me-text">-->
-<!--        Placeholder text goes here. -->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <h1 class="skills-heading">Skills:</h1>-->
-<!--    <ul class="horizontal-list">-->
-<!--      <li class="custom-item">C++</li>-->
-<!--      <li class="custom-item">C#</li>-->
-<!--      <li class="custom-item">Unreal</li>-->
-<!--      <li class="custom-item">AI</li>-->
-<!--      <li class="custom-item">Proc gen</li>-->
-<!--      <li class="custom-item">Unity</li>-->
-<!--      <li class="custom-item">Visual studio</li>-->
-<!--    </ul>-->
-<!--  </section>-->
-  <!-- <div class="new-section">
-    <h1 class="about-me-heading">About me:</h1>
-    <div class="about-me-row">
-      <div class="selfie-column">
-        <img class="selfie" src="me.jpg" alt="">
+<!---------------------------------------------------------------------------------------------------
+PROJECTS:
+----------------------------------------------------------------------------------------------------->
+  <div class="projects-container" id="projects">
+    <h1 class="projects-header">Projects</h1>
+    <div class="projects-content">
+      <div class="projects-tab">
+        <button class="tablinks" id="voxel-tab" onclick="openProj(event, 'Voxel-world')">Voxel world generator</button>
+        <button class="tablinks" onclick="openProj(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openProj(event, 'Tokyo')">Tokyo</button>
       </div>
-      <div class="text-column">
-        <h2 class="Skills">Skills</h2>
+
+      <!-- Tab content -->
+      <div id="Voxel-world" class="tabcontent">
+        <div class="gallery">
+          <div class="gallery-slide">
+            <video width="100%" height="600" draggable="false" controls src="VideoStarkeyNiall.mp4"></video>
+          </div>
+          <div class="gallery-slide">
+            <video width="100%" height="600" draggable="false" controls src="Voxel World.mp4"></video>
+          </div>
+          <div class="gallery-slide">
+            <img src="mountains.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Mountains</div>
+          </div>
+          <div class="gallery-slide">
+            <img src="tundra.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Tundra</div>
+          </div>
+          <div class="gallery-slide">
+            <img src="forest.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Forest</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)"><i class="material-icons">chevron_left</i></a>
+          <a class="next" onclick="plusSlides(1)"><i class="material-icons">chevron_right</i></a>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        </div>
       </div>
-    </div> -->
 
+      <div id="sdf" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
 
+      <div id="hwg" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>

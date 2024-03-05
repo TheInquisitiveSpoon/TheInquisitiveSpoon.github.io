@@ -1,3 +1,19 @@
+let slideIndex = 1;
+showSlides(slideIndex);
+
+window.onload = function() {
+    openSkill(event, 'Programming')
+    document.getElementById("programming-tab").className += " active";
+
+    openProj(event, 'Voxel-world')
+    document.getElementById("voxel-tab").className += " active";
+    
+    showSlides(slideIndex);
+    
+    // Call the function on page load
+    moveElementOnResize();
+};
+
 function myFunction() {
     console.log("myFunction called");
     document.getElementById("drp-content").classList.toggle("show");
@@ -30,23 +46,19 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-window.onload = function() {
-    openCity(event, 'London')
-    document.getElementById("programming").className += " active";
-};
-function openCity(evt, cityName) {
+function openSkill(evt, cityName) {
     // Declare all variables
     let i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("skill-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
         console.log("hidden")
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("skills-tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
         console.log("removed active")
@@ -73,8 +85,57 @@ function moveElementOnResize() {
     }
 }
 
-// Call the function on page load
-moveElementOnResize();
-
 // Call the function on window resize
 window.addEventListener('resize', moveElementOnResize);
+
+function openProj(evt, projName) {
+    // Declare all variables
+    let i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(projName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    console.log("tab shown")
+}
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    console.log("next/prev")
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    console.log("thumbnail clicked")
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("gallery-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
