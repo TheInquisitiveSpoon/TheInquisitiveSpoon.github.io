@@ -20,7 +20,7 @@
   VW 1980px-428px
   
   TO DO:
-  
+  Fix next/prev buttons on video scaling with gallery
   
   -->
   
@@ -45,137 +45,151 @@ HERO:
       <div class="menu">
         <button class="drpbtn" id="drpbtn" onclick="myFunction()"><i class="material-icons">menu</i></button>
         <div class="dropdown-content" id="drp-content">
-          <a href="#home"><i class="material-icons">home</i>Home</a>
-          <a href="#about"><i class="material-icons">info</i>About</a>
-          <a href="#projects"><i class="material-icons">terminal</i>Projects</a>
-          <a href="#contact"><i class="material-icons">mail</i>Contact</a>
+          <a href="#home"><i class="material-icons" onclick="showScrollbar()">home</i>Home</a>
+          <a href="#about"><i class="material-icons" onclick="showScrollbar()">info</i>About</a>
+          <a href="#projects"><i class="material-icons" onclick="showScrollbar()">terminal</i>Projects</a>
+          <a href="#contact"><i class="material-icons" onclick="showScrollbar()">mail</i>Contact</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="hero-container" id="home">
-    <div class="hero-svg"></div>
-    <div class="hero-content">
-      <h1 class="hero-text">
-        Hi, my name is<span style="color:#9754CB;"> Niall</span>,<br>
-        I'm a video game developer.
-      </h1>
-      <button class="learn-more-button">Learn more</button>
-    </div>
-  </div>
+<!--  <div class="hero-container" id="home">-->
+<!--    <div class="hero-svg"></div>-->
+<!--    <div class="hero-content">-->
+<!--      <h1 class="hero-text">-->
+<!--        Hi, my name is<span style="color:#9754CB;"> Niall</span>,<br>-->
+<!--        I'm a video game developer.-->
+<!--      </h1>-->
+<!--      <button class="learn-more-button">Learn more</button>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="hero-divider"></div>
-  
-<!---------------------------------------------------------------------------------------------------
-ABOUT ME:
- ----------------------------------------------------------------------------------------------------->
-  <div class="about-me-container" id="about">
-    <h1 class="stats-header">Stats</h1>
-    <div class="about-me-content" id="abt-me-cont">
-      <div class="stats-wrapper" id="stats">
-        <div class="left-section">
-          <img id="profile-img" src="me.jpg" alt="Profile Image">
-          <div class="stat-divider"></div>
-        </div>
-        <div class="right-section" id="stats-right">
-          <h2 class="name">Niall Starkey</h2>
-          <p class="title">Video game developer</p>
-          <div class="lv-bar" id="lv-bar">
-            <div class="level-progress-bar">
-              <div class="level-progress" style="width: 24%;"></div>
-              <p class="level-progress-label">89/365</p>
-            </div>
-            <h4 class="level-label">Lv.25</h4>
-          </div>
-        </div>
-        <p class="stats-info">Some stuff about me, idk but it's really amazing so you should be
-          impressed if i'm honest. Don't even need to convince you, cause you
-          should just know already that i'm sick lad.
-        </p>
-      </div>
-      <div class="stats">
-        <div class="skills-tab">
-          <button class="skills-tablink" id="programming-tab" onclick="openSkill(event, 'Programming')">
-            <a class="skill-bar">
-              <h2 class="skill-name">Programming</h2>
-              <div class="skill-progress-bar">
-                <div class="level-progress" style="width: 95%;"></div>
-                <p class="level-progress-label">95/100</p>
-              </div>
-            </a>
-          </button>
-          <button class="skills-tablink" onclick="openSkill(event, 'Problem-solving')">
-            <a class="skill-bar">
-              <h2 class="skill-name">Problem Solving</h2>
-              <div class="skill-progress-bar">
-                <div class="level-progress" style="width: 75%;"></div>
-                <p class="level-progress-label">75/100</p>
-              </div>
-            </a>
-          </button>
-          <button class="skills-tablink" onclick="openSkill(event, 'Adaptability')">
-            <a class="skill-bar">
-              <h2 class="skill-name">Adaptability</h2>
-              <div class="skill-progress-bar">
-                <div class="level-progress" style="width: 65%;"></div>
-                <p class="level-progress-label">65/100</p>
-              </div>
-            </a>
-          </button>
-        </div>
+<!--  <div class="hero-divider" id="about"></div>-->
+<!--  -->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--ABOUT ME:-->
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--  <div class="about-me-container">-->
+<!--    <h1 class="stats-header">Stats</h1>-->
+<!--    <div class="about-me-content" id="abt-me-cont">-->
+<!--      <div class="stats-wrapper" id="stats">-->
+<!--        <div class="left-section">-->
+<!--          <img id="profile-img" src="me.jpg" alt="Profile Image">-->
+<!--          <div class="stat-divider"></div>-->
+<!--        </div>-->
+<!--        <div class="right-section" id="stats-right">-->
+<!--          <h2 class="name">Niall Starkey</h2>-->
+<!--          <p class="title">Video game developer</p>-->
+<!--          <div class="lv-bar" id="lv-bar">-->
+<!--            <div class="level-progress-bar">-->
+<!--              <div class="level-progress" style="width: 24%;"></div>-->
+<!--              <p class="level-progress-label">89/365</p>-->
+<!--            </div>-->
+<!--            <h4 class="level-label">Lv.25</h4>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <p class="stats-info">Some stuff about me, idk but it's really amazing so you should be-->
+<!--          impressed if i'm honest. Don't even need to convince you, cause you-->
+<!--          should just know already that i'm sick lad.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="stats">-->
+<!--        <div class="skills-tab">-->
+<!--          <button class="skills-tablink" id="programming-tab" onclick="openSkill(event, 'Programming')">-->
+<!--            <a class="skill-bar">-->
+<!--              <h2 class="skill-name">Programming</h2>-->
+<!--              <div class="skill-progress-bar">-->
+<!--                <div class="level-progress" style="width: 95%;"></div>-->
+<!--                <p class="level-progress-label">95/100</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </button>-->
+<!--          <button class="skills-tablink" onclick="openSkill(event, 'Problem-solving')">-->
+<!--            <a class="skill-bar">-->
+<!--              <h2 class="skill-name">Problem Solving</h2>-->
+<!--              <div class="skill-progress-bar">-->
+<!--                <div class="level-progress" style="width: 75%;"></div>-->
+<!--                <p class="level-progress-label">75/100</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </button>-->
+<!--          <button class="skills-tablink" onclick="openSkill(event, 'Adaptability')">-->
+<!--            <a class="skill-bar">-->
+<!--              <h2 class="skill-name">Adaptability</h2>-->
+<!--              <div class="skill-progress-bar">-->
+<!--                <div class="level-progress" style="width: 65%;"></div>-->
+<!--                <p class="level-progress-label">65/100</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </button>-->
+<!--        </div>-->
 
-        <div id="Programming" class="skill-content">
-          <h3>Programming</h3>
-          <p>Keen knowledge in many languages.</p>
-        </div>
+<!--        <div id="Programming" class="skill-content">-->
+<!--          <h3>Programming</h3>-->
+<!--          <p>Keen knowledge in many languages.</p>-->
+<!--        </div>-->
 
-        <div id="Problem-solving" class="skill-content">
-          <h3>Problem solving</h3>
-          <p>Ability to break down and solve problems piece by piece.</p>
-        </div>
+<!--        <div id="Problem-solving" class="skill-content">-->
+<!--          <h3>Problem solving</h3>-->
+<!--          <p>Ability to break down and solve problems piece by piece.</p>-->
+<!--        </div>-->
 
-        <div id="Adaptability" class="skill-content">
-          <h3>Adaptability</h3>
-          <p>Can think on the fly and work well in any environment.</p>
-        </div>
-      </div>
-    </div>
-<!--    <span class="skill-tag">C++<span class="ribbon">8+yrs</span></span>-->
-<!--    <span class="skill-tag">C#</span>-->
-<!--    <span class="skill-tag">XAML</span>-->
-<!--    <span class="skill-tag">Unreal</span>-->
-<!--    <span class="skill-tag">Unity</span>-->
-<!--    <span class="skill-tag">Visual Studio</span>-->
-<!--    <span class="skill-tag">Rider</span>-->
-<!--    <span class="skill-tag">Python</span>-->
-<!--    <span class="skill-tag">Javascript</span>-->
-<!--    <span class="skill-tag">HTML</span>-->
-<!--    <span class="skill-tag">CSS</span>-->
-  </div>
+<!--        <div id="Adaptability" class="skill-content">-->
+<!--          <h3>Adaptability</h3>-->
+<!--          <p>Can think on the fly and work well in any environment.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <span class="skill-tag">C++<span class="ribbon">8+yrs</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">C#</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">XAML</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Unreal</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Unity</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Visual Studio</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Rider</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Python</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">Javascript</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">HTML</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="skill-tag">CSS</span>&ndash;&gt;-->
+<!--  </div>-->
 
-  <div class="about-me-divider"></div>
+  <div class="about-me-divider" id="projects"></div>
 
 <!---------------------------------------------------------------------------------------------------
 PROJECTS:
 ----------------------------------------------------------------------------------------------------->
-  <div class="projects-container" id="projects">
+  <div class="projects-container" >
     <h1 class="projects-header">Projects</h1>
     <div class="projects-content">
-      <div class="projects-tab">
-        <button class="tablinks" id="voxel-tab" onclick="openProj(event, 'Voxel-world')">Voxel world generator</button>
-        <button class="tablinks" onclick="openProj(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openProj(event, 'Tokyo')">Tokyo</button>
-      </div>
-
-      <!-- Tab content -->
-      <div id="Voxel-world" class="tabcontent">
-        <div class="gallery">
+      <div class="project-info">
+        <div class="project-description">
+          <h2>Voxel world generator</h2>
+          <p>Utilises procedural generation to make realistic, near infinite
+            voxel-based worlds for the player to edit and explore. Complete
+            with multiple biomes to add variation to the terrain and create
+            interesting locales.</p>
+          <p>Multiple biome generation is a key feature of this project, yet
+            it is very difficult to implement effectively, to produce nice 
+            terrain generation. This section shall discuss the biome types 
+            added to this project, and a detailed explanation of how biomes 
+            are determined, generated and interpolated.</p>
+          <div class="project-tags">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Proc gen</span>
+            <span class="skill-tag">Rendering</span>
+          </div>
+          <a class="source-button"
+             href="https://github.com/TheInquisitiveSpoon/Voxel-Based-Terrain-Generation">Source Code
+          </a>
+        </div>
+        <div class="gallery" id="gallery">
           <div class="gallery-slide">
-            <video width="100%" height="600" draggable="false" controls src="VideoStarkeyNiall.mp4"></video>
+            <video width="100%" draggable="false" autoplay muted loop src="Voxel-world-demo.mp4"></video>
           </div>
           <div class="gallery-slide">
-            <video width="100%" height="600" draggable="false" controls src="Voxel World.mp4"></video>
+            <video width="100%" draggable="false" autoplay muted loop src="Voxel World.mp4"></video>
           </div>
           <div class="gallery-slide">
             <img src="mountains.png" draggable="false" alt="image of me">
@@ -192,8 +206,8 @@ PROJECTS:
 
           <a class="prev" onclick="plusSlides(-1)"><i class="material-icons">chevron_left</i></a>
           <a class="next" onclick="plusSlides(1)"><i class="material-icons">chevron_right</i></a>
-
-          <div style="text-align:center">
+          
+          <div class="dot-container">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -201,16 +215,6 @@ PROJECTS:
             <span class="dot" onclick="currentSlide(5)"></span>
           </div>
         </div>
-      </div>
-
-      <div id="sdf" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-      </div>
-
-      <div id="hwg" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
       </div>
     </div>
   </div>

@@ -4,15 +4,49 @@ showSlides(slideIndex);
 window.onload = function() {
     openSkill(event, 'Programming')
     document.getElementById("programming-tab").className += " active";
-
-    openProj(event, 'Voxel-world')
-    document.getElementById("voxel-tab").className += " active";
     
     showSlides(slideIndex);
     
     // Call the function on page load
     moveElementOnResize();
 };
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("gallery-slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+
+// function resizeGallery() {
+//     let gallery = document.getElementById('gallery');
+//     let slides = document.getElementsByClassName("gallery-slide")
+//     let activeslide
+//    
+//     for (i = 0; i < slides.length; i++) {
+//         if (window.getComputedStyle(slides[i]).getPropertyValue('display') === "block") {
+//             activeslide = slides[i];
+//         }
+//     }
+//    
+//     gallery.style.height = activeslide.offsetHeight + 'px';
+// }
 
 function myFunction() {
     console.log("myFunction called");
@@ -36,6 +70,7 @@ window.onclick = function (event) {
 }
 
 let prevScrollpos = window.scrollY;
+
 window.onscroll = function() {
     let currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
@@ -44,6 +79,11 @@ window.onscroll = function() {
     document.getElementById("header").style.top = "-80px";
   }
   prevScrollpos = currentScrollPos;
+}
+
+function showScrollbar() {
+    prevScrollpos = 10000
+    document.getElementById("header").style.top = "0";
 }
 
 function openSkill(evt, cityName) {
@@ -87,55 +127,3 @@ function moveElementOnResize() {
 
 // Call the function on window resize
 window.addEventListener('resize', moveElementOnResize);
-
-function openProj(evt, projName) {
-    // Declare all variables
-    let i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(projName).style.display = "block";
-    evt.currentTarget.className += " active";
-
-    console.log("tab shown")
-}
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-    console.log("next/prev")
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-    console.log("thumbnail clicked")
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("gallery-slide");
-    let dots = document.getElementsByClassName("dot");
-    
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
