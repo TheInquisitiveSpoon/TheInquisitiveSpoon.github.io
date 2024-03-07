@@ -184,12 +184,12 @@ PROJECTS:
              href="https://github.com/TheInquisitiveSpoon/Voxel-Based-Terrain-Generation">Source Code
           </a>
         </div>
-        <div class="gallery" id="gallery">
+        <div class="gallery" id="voxel-gallery">
           <div class="gallery-slide">
-            <video width="100%" draggable="false" autoplay muted loop src="Voxel-world-demo.mp4"></video>
+            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel-world-demo.mp4"></video>
           </div>
           <div class="gallery-slide">
-            <video width="100%" draggable="false" autoplay muted loop src="Voxel World.mp4"></video>
+            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel World.mp4"></video>
           </div>
           <div class="gallery-slide">
             <img src="mountains.png" draggable="false" alt="image of me">
@@ -204,15 +204,75 @@ PROJECTS:
             <div class="gallery-text">Forest</div>
           </div>
 
-          <a class="prev" onclick="plusSlides(-1)"><i class="material-icons">chevron_left</i></a>
-          <a class="next" onclick="plusSlides(1)"><i class="material-icons">chevron_right</i></a>
+          <a class="prev" onclick="plusSlides(-1, 'voxel-gallery')"><i class="material-icons">chevron_left</i></a>
+          <a class="next" onclick="plusSlides(1, 'voxel-gallery')"><i class="material-icons">chevron_right</i></a>
           
           <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(1, 'voxel-gallery')"></span>
+            <span class="dot" onclick="currentSlide(2, 'voxel-gallery')"></span>
+            <span class="dot" onclick="currentSlide(3, 'voxel-gallery')"></span>
+            <span class="dot" onclick="currentSlide(4, 'voxel-gallery')"></span>
+            <span class="dot" onclick="currentSlide(5, 'voxel-gallery')"></span>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="solid">
+
+
+      <div class="project-info">
+        <div class="project-description">
+          <h2>Economy</h2>
+          <p>The core mechanics of this demonstration revolve around a 
+            harvesting, selling and trading economy, where a player can 
+            harvest resources such as wood, stone and iron and buy, sell 
+            or trade resources with non-playable character merchants.</p>
+          <p>There are 3 harvestable resources in the game wood, stone 
+            and iron ore, as well as gold that acts as a currency. In real 
+            life these resources have worth based upon supply and demand, 
+            I have replicated this by making iron nodes much rare, as well 
+            as making them give the player less total resources per node.</p>
+          <div class="project-tags">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Economy sim</span>
+            <span class="skill-tag">UI</span>
+            <span class="skill-tag">Feedback loops</span>
+          </div>
+          <a class="source-button"
+             href="https://github.com/TheInquisitiveSpoon/Economy">Source Code
+          </a>
+        </div>
+        <div class="gallery" id="gallery2">
+          <div class="gallery-slide">
+            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel-world-demo.mp4"></video>
+          </div>
+          <div class="gallery-slide">
+            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel World.mp4"></video>
+          </div>
+          <div class="gallery-slide">
+            <img src="mountains.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Mountains</div>
+          </div>
+          <div class="gallery-slide">
+            <img src="tundra.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Tundra</div>
+          </div>
+          <div class="gallery-slide">
+            <img src="forest.png" draggable="false" alt="image of me">
+            <div class="gallery-text">Forest</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1, 'gallery2')"><i class="material-icons">chevron_left</i></a>
+          <a class="next" onclick="plusSlides(1, 'gallery2')"><i class="material-icons">chevron_right</i></a>
+
+          <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1, 'gallery2')"></span>
+            <span class="dot" onclick="currentSlide(2, 'gallery2')"></span>
+            <span class="dot" onclick="currentSlide(3, 'gallery2')"></span>
+            <span class="dot" onclick="currentSlide(4, 'gallery2')"></span>
+            <span class="dot" onclick="currentSlide(5, 'gallery2')"></span>
           </div>
         </div>
       </div>

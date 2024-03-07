@@ -1,36 +1,42 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndexes = {};
+slideIndexes['voxel-gallery'] = 1;
+slideIndexes['gallery2'] = 1
+showSlides(slideIndexes['voxel-gallery'], "voxel-gallery");
+showSlides(slideIndexes['gallery2'], "gallery2");
 
 window.onload = function() {
     openSkill(event, 'Programming')
     document.getElementById("programming-tab").className += " active";
-    
-    showSlides(slideIndex);
     
     // Call the function on page load
     moveElementOnResize();
 };
 
 // Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n, galleryID) {
+    showSlides(slideIndexes[galleryID] += n, galleryID);
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("gallery-slide");
-    let dots = document.getElementsByClassName("dot");
+// Thumbnail image controls
+function currentSlide(n, galleryID) {
+    showSlides(slideIndexes[galleryID] = n, galleryID);
+}
 
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+function showSlides(n, galleryID) {
+    let i;
+    let slides = document.getElementById(galleryID).getElementsByClassName("gallery-slide");
+    let dots = document.getElementById(galleryID).getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndexes[galleryID] = 1}
+    if (n < 1) {slideIndexes[galleryID] = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[slideIndexes[galleryID]-1].style.display = "block";
+    dots[slideIndexes[galleryID]-1].className += " active";
 }
 
 
