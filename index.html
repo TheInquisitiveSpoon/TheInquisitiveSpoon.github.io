@@ -20,7 +20,9 @@
   VW 1980px-428px
   
   TO DO:
-  Fix next/prev buttons on video scaling with gallery
+  Fix video not playing on mobile
+  Add videos/photos of other project
+  Add continue button/arrow for each section
   
   -->
   
@@ -28,9 +30,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-<!---------------------------------------------------------------------------------------------------
-HERO:
------------------------------------------------------------------------------------------------------>
+<!---------------------------------------------------------------------------------------
+TOPNAV:
+---------------------------------------------------------------------------------------->
   <div class="header" id="header">
     <div class="logo">
       <span>Niall Starkey</span>
@@ -54,6 +56,9 @@ HERO:
     </div>
   </div>
 
+<!---------------------------------------------------------------------------------------
+HERO:
+---------------------------------------------------------------------------------------->
   <div class="hero-container" id="home">
     <div class="hero-svg"></div>
     <div class="hero-content">
@@ -66,10 +71,10 @@ HERO:
   </div>
 
   <div class="hero-divider" id="about"></div>
-  
-<!---------------------------------------------------------------------------------------------------
+
+<!---------------------------------------------------------------------------------------
 ABOUT ME:
- ----------------------------------------------------------------------------------------------------->
+---------------------------------------------------------------------------------------->
   <div class="about-me-container">
     <h1 class="stats-header">Stats</h1>
     <div class="about-me-content" id="abt-me-cont">
@@ -141,24 +146,13 @@ ABOUT ME:
         </div>
       </div>
     </div>
-<!--    <span class="skill-tag">C++<span class="ribbon">8+yrs</span></span>-->
-<!--    <span class="skill-tag">C#</span>-->
-<!--    <span class="skill-tag">XAML</span>-->
-<!--    <span class="skill-tag">Unreal</span>-->
-<!--    <span class="skill-tag">Unity</span>-->
-<!--    <span class="skill-tag">Visual Studio</span>-->
-<!--    <span class="skill-tag">Rider</span>-->
-<!--    <span class="skill-tag">Python</span>-->
-<!--    <span class="skill-tag">Javascript</span>-->
-<!--    <span class="skill-tag">HTML</span>-->
-<!--    <span class="skill-tag">CSS</span>-->
   </div>
 
   <div class="about-me-divider" id="projects"></div>
 
-<!---------------------------------------------------------------------------------------------------
+<!---------------------------------------------------------------------------------------
 PROJECTS:
------------------------------------------------------------------------------------------------------>
+---------------------------------------------------------------------------------------->
   <div class="projects-container" >
     <h1 class="projects-header">Projects</h1>
     <div class="projects-content">
@@ -186,10 +180,15 @@ PROJECTS:
         </div>
         <div class="gallery" id="voxel-gallery">
           <div class="gallery-slide">
-            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel-world-demo.mp4"></video>
+<!--            <video width="100%" draggable="false" playsinline poster autoplay muted loop src="Voxel-world-demo.mp4"></video>-->
+            <video width="100%" draggable="false" playsinline poster="video-poster.jpg" muted loop id="video">
+              <source src="Voxel-world-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button onclick="playVideo()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.5); border: none; padding: 10px 20px; border-radius: 5px;">Play</button>
           </div>
           <div class="gallery-slide">
-            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel World.mp4"></video>
+            <video width="100%" draggable="false" playsinline poster autoplay muted loop src="Voxel World.mp4"></video>
           </div>
           <div class="gallery-slide">
             <img src="mountains.png" draggable="false" alt="image of me">
@@ -246,10 +245,10 @@ PROJECTS:
         </div>
         <div class="gallery" id="gallery2">
           <div class="gallery-slide">
-            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel-world-demo.mp4"></video>
+            <video width="100%" draggable="false" playsinline poster autoplay muted loop src="Voxel-world-demo.mp4"></video>
           </div>
           <div class="gallery-slide">
-            <video width="100%" draggable="false" playsinline autoplay muted loop src="Voxel World.mp4"></video>
+            <video width="100%" draggable="false" playsinline poster autoplay muted loop src="Voxel World.mp4"></video>
           </div>
           <div class="gallery-slide">
             <img src="mountains.png" draggable="false" alt="image of me">
@@ -278,6 +277,19 @@ PROJECTS:
       </div>
     </div>
   </div>
+
+<div class="hero-divider" id="contact"></div>
+
+<!---------------------------------------------------------------------------------------
+CONTACT:
+---------------------------------------------------------------------------------------->
+<div class="about-me-container">
+  <h1 class="stats-header">Contact me</h1>
+  <div class="about-me-content"></div>
+  <h2>Email:</h2>
+  <h2>Tel:</h2>
+</div>
+  
 </body>
 <script src="script.js"></script>
 </html>

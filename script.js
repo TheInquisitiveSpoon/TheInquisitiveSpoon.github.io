@@ -35,10 +35,13 @@ function showSlides(n, galleryID) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndexes[galleryID]-1].style.display = "block";
+    slides[slideIndexes[galleryID]-1].style.display = "flex";
     dots[slideIndexes[galleryID]-1].className += " active";
 }
-
+function playVideo() {
+    let video = document.getElementById('video');
+    video.play();
+}
 
 // function resizeGallery() {
 //     let gallery = document.getElementById('gallery');
